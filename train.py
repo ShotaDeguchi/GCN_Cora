@@ -139,9 +139,9 @@ def _main():
             t1 = time.time()
             elps = t1 - t0
             print(f"epoch: {epoch:03d}, "
-                    f"loss: {loss:.4f}, acc: {acc:.4f}, "
-                    f"loss_val: {loss_val:.4f}, acc_val: {acc_val:.4f}, "
-                    f"best_loss: {best_loss:.4f}, wait: {wait:02d}, "
+                    f"loss: {loss:.3f}, acc: {acc:.3f}, "
+                    f"loss_val: {loss_val:.3f}, acc_val: {acc_val:.3f}, "
+                    f"best_loss: {best_loss:.3f}, wait: {wait:02d}, "
                     f"time: {elps:.2f} s")
             t0 = time.time()
 
@@ -158,7 +158,7 @@ def _main():
         logits = model_0(features, torch.eye(adj_mat.size(0)).to(device))
         loss_test = loss_fn(logits[idx_test], labels[idx_test])
         acc_test = acc_fn(logits[idx_test], labels[idx_test])
-    print(f"loss_test: {loss_test:.4f}, acc_test: {acc_test:.4f}")
+    print(f"loss_test: {loss_test:.3f}, acc_test: {acc_test:.3f}")
 
     # save
     print("\n>>> saving...")
@@ -236,9 +236,9 @@ def _main():
             t1 = time.time()
             elps = t1 - t0
             print(f"epoch: {epoch:03d}, "
-                    f"loss: {loss:.4f}, acc: {acc:.4f}, "
-                    f"loss_val: {loss_val:.4f}, acc_val: {acc_val:.4f}, "
-                    f"best_loss: {best_loss:.4f}, wait: {wait:02d}, "
+                    f"loss: {loss:.3f}, acc: {acc:.3f}, "
+                    f"loss_val: {loss_val:.3f}, acc_val: {acc_val:.3f}, "
+                    f"best_loss: {best_loss:.3f}, wait: {wait:02d}, "
                     f"time: {elps:.2f} s")
             t0 = time.time()
 
@@ -255,7 +255,7 @@ def _main():
         logits = model_1(features, adj_mat)
         loss_test = loss_fn(logits[idx_test], labels[idx_test])
         acc_test = acc_fn(logits[idx_test], labels[idx_test])
-    print(f"loss_test: {loss_test:.4f}, acc_test: {acc_test:.4f}")
+    print(f"loss_test: {loss_test:.3f}, acc_test: {acc_test:.3f}")
 
     # save
     print("\n>>> saving...")
