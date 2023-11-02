@@ -11,6 +11,13 @@ Cora classification results with the following:
 * Epochs: 200
 * Patience: 10
 
-| validation loss | validation accuracy |
+| loss | accuracy |
 | :---: | :---: |
 | ![img](results/loss.png) | ![img](results/accuracy.png) |
+
+Test dataset results:
+| model | loss | accuracy |
+| :---: | :---: | :---: |
+| MLP | 1.142 | 61.0 % |
+| GCN | 0.961 | 71.5 % |
+
